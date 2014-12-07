@@ -15,9 +15,9 @@ Add the following entry to your plugins vector in project.clj
 
 Define an Appspec section, as shown in the example below.
 
-Here
-   - appspec-file, represents the appspec file. Refer [AppSpec-Reference](http://docs.aws.amazon.com/codedeploy/latest/userguide/app-spec-ref.html)
-   - package, Represents the name of the code-deploy package
+Here:
+   - appspec-file, represents the appspec file. Refer [AppSpec-Reference](http://docs.aws.amazon.com/codedeploy/latest/userguide/app-spec-ref.html).
+   - package, Represents the name of the code-deploy package.
    - tokens, Represents a map of the form {:<from> "to"}, these tokens will be used to replace templated values in the appspec or the scripts. See below for further details.
 
 ~~~
@@ -32,8 +32,9 @@ To execute the plugin
      > lein aws-codedeploy
 ~~~
 
+A sample appspec.yml is shown below. The tokens defined in {{}} are replaced with the values defined in the tokens map. (Here, {{version}} is a special token referring to this leiningen project's version).
 
-A sample appspec.yml is shown below. The tokens defined in {{}} are replaced with the values defined in the tokens map. (Here, {{version}} is a special token referring to this leiningen project's version)
+You can checkout a working [example](https://github.com/ystad/lein-codedeploy-example).
 
 ~~~
       version: 0.0
@@ -54,4 +55,4 @@ A sample appspec.yml is shown below. The tokens defined in {{}} are replaced wit
 
 ## License
 
-Distributed under the Eclipse Public License
+Distributed under the Eclipse Public License.
